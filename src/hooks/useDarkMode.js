@@ -1,7 +1,7 @@
-import useLocalStorage from './useLocalStorage';
+import { useLocalStorage } from './useLocalStorage';
 
-export const useDarkMode = () => {
-  const [storedValue, setStoredValue] = useLocalStorage('mode', 'light');
+export const useDarkMode = (initialValue) => {
+  const [storedValue, setStoredValue] = useLocalStorage('mode', initialValue);
 
   const setValue = (value) => {
     setStoredValue(value);
